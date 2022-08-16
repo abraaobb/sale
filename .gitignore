@@ -4,3 +4,5 @@ basic/__pycache__/
 sale/__pycache__/
 
 basic/migrations/__pycache__/
+
+db.sqlite3
