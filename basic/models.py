@@ -74,6 +74,9 @@ class State(ModelBase):
         db_table = 'state'
         managed = True
 
+    def __str__(self):
+        return '{} - {}'.format(self.name, self.abbreviation)
+
 
 class Supplier(ModelBase):
     name = models.CharField(
@@ -149,7 +152,8 @@ class Product(ModelBase):
 class City(ModelBase):
     name = models.CharField(
         max_length=64,
-        null=False
+        null=False,
+
     )
     state = models.ForeignKey(
         to='State',
@@ -184,6 +188,9 @@ class District(ModelBase):
     class Meta:
         db_table = 'district'
         managed = True
+
+    def __str__(self):
+        return self.name
 
 
 class Employee(ModelBase):
