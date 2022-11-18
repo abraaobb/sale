@@ -26,6 +26,7 @@ class StateAdmin(admin.ModelAdmin):
     list_display_links = ['id', 'name', 'abbreviation', 'modified_at', 'active']
     search_fields = ['name']
     list_filter = ['active']
+    list_per_page = 10
 
 
 @admin.register(models.City)
@@ -58,3 +59,5 @@ class EmployeeAdmin(admin.ModelAdmin):
     list_display_links = ['id', 'name', 'gender', 'modified_at', 'active']
     search_fields = ['name']
     list_filter = ['active']
+    list_per_page = 10
+    

@@ -34,6 +34,9 @@ class Department(ModelBase):
         db_table = 'department'
         managed = True
 
+    def __str__(self):
+        return self.name
+
 
 class MaritalStatus(ModelBase):
     name = models.CharField(
@@ -57,6 +60,9 @@ class Zone(ModelBase):
     class Meta:
         db_table = 'zone'
         managed = True
+
+    def __str__(self):
+        return self.name
 
 
 class State(ModelBase):
@@ -165,6 +171,9 @@ class City(ModelBase):
     class Meta:
         db_table = 'city'
         managed = True
+
+    def __str__(self):
+        return self.name
 
 
 class District(ModelBase):
